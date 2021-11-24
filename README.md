@@ -7,5 +7,5 @@
   
 *Yes. Those are all the same link, it's really that easy!*
 
-### Example screenshot
+### Screenshot
 ![Example image](https://raw.githubusercontent.com/chriskroon/year-select/main/example/screenshot.png)
