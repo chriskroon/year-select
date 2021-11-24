@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Custom Year Select by Chris Kroon</title>
+<link rel="stylesheet" href="../files/year-select.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="card mt-4 mb-4">
+    <div class="card-header">A function made simple by <a href="https://github.com/chriskroon" target="_blank">Chris Kroon</a></div>
+    <div class="card-body">
+      <h1 class="mb-4">Demo site for a custom Year Select by Chris Kroon</h1>
+      <h2 class="mb-4">Step 1. Installation</h2>
+      <div class="card mb-4">
+        <div class="card-header">
+          <b>Step 1.1</b> Add JavaScript
+        </div>
+        <div class="card-body">
+          <p class="mb-1"><label><b>jQuery 1.7+ required</b></label></p>
+          <pre class="brush:xml">
+            <!-- Locally -->
+            <script type="text/javascript" src="../required/jquery.js"></script>
+            
+            <!-- Or via a CDN -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery-dist/dist/jquery.min.js"></script>
+          </pre>
+          <p class="mb-1"><label><b>Year Select JS</b></label></p>
+          <pre class="brush:xml">
+            <!-- Download the file into your project before including -->
+            <script type="text/javascript" src="../files/year-select.js"></script>
+          </pre>          
+        </div>
+      </div>
+      <div class="card mb-4">
+        <div class="card-header">
+          <b>Step 1.2</b> Add CSS
+        </div>
+        <div class="card-body">
+          <p class="mb-1"><label><b>Year Select CSS</b></label></p>
+          <pre class="brush:xml">
+            <!-- Download the file into your project before including -->
+            <link rel="stylesheet" href="../files/year-select.css">
+          </pre>          
+        </div>
+      </div>
+      <h2 class="mb-4">Step 2. Add HTML and JavaScript to use</h2>         
+      <div class="card mb-4">
+        <div class="card-header">
+          <b>Default options</b>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">        
+              <label class="mb-3">Demo default options</label>
+              <input type="year" class="form-control default">
+            </div>
+            <div class="col-8">  
+              <label>Used HTML</label>
+              <pre class="brush:xml">
+                <input type="year" class="form-control default">
+              </pre>  
+              <label>Used JavaScript</label>
+              <pre class="brush:js">
+                $('input.default[type="year"]').click(function(e){
+                  e.preventDefault()
+                  showYear($(this),{})
+                })
+                $('input.default[type="year"]').keydown(function(e){
+                  e.preventDefault()
+                })
+              </pre>                   
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <b>Custom options</b>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">  
+              <label class="mb-3">Demo custom options</label>
+              <input type="year" class="form-control custom-options">
+            </div>
+            <div class="col-8">
+              <label>Used HTML</label>
+              <pre class="brush:xml">
+                <input type="year" class="form-control custom-options">
+              </pre>              
+              <label>Used JavaScript</label> 
+              <pre class="brush:js">
+                $('input.custom-options[type="year"]').click(function(e){
+                  e.preventDefault()
+                  showYear($(this),
+                    {
+                      years_before_now: 5,
+                      years_after_now: 100
+                    }
+                  )
+                })
+                $('input.custom-options[type="year"]').keydown(function(e){
+                  e.preventDefault()
+                })  
+              </pre>   
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div> 
+    <div class="card-header">Github: <a href="https://github.com/chriskroon/year-select" target="_blank">Custom Year Select by Chris Kroon</a></div>
+
+  </div>
+</div>
+<script type="text/javascript" src="../required/jquery.js"></script>
+<script type="text/javascript" src="../files/year-select.js"></script>
+<script type="text/javascript" src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shBrushCss.js"></script>
+<script>
+  SyntaxHighlighter.all();  
+
+  $('input.default[type="year"]').click(function(e){
+    e.preventDefault()
+    showYear($(this),{})
+  })
+  $('input.default[type="year"]').keydown(function(e){
+    e.preventDefault()
+  })
+
+  $('input.custom-options[type="year"]').click(function(e){
+    e.preventDefault()
+    showYear($(this),
+      {
+        years_before_now: 5,
+        years_after_now: 100
+      }
+    )
+  })
+  $('input.custom-options[type="year"]').keydown(function(e){
+    e.preventDefault()
+  })  
+</script>
+</body>
+</html>
