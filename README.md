@@ -1,8 +1,10 @@
 # Custom Year Select by Chris Kroon
 
 **Links**
-- [Instructions](https://chriskroon.github.io/year-select/example/).
-- [How to use](https://chriskroon.github.io/year-select/example/).
+- [Instructions](https://chriskroon.github.io/year-select/example/)
+- [How to use](https://chriskroon.github.io/year-select/example/)
+- [Demo](https://chriskroon.github.io/year-select/example/)
+*Yes all the same links, cause it is really that easy!*
 
 ### Example screenshot
 ![Example image](https://raw.githubusercontent.com/chriskroon/year-select/main/example/screenshot.png)
