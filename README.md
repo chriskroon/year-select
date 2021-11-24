@@ -6,4 +6,4 @@ Drag the example/index.html into your browser of choose
 - Step 3:
 Follow the instructions given on example/index.html
 ### Example
-![Example image](https://github.com/chriskroon/year-select/example/screenshot.svg)
+![Example image](https://raw.githubusercontent.com/chriskroon/year-select/main/example/screenshot.png)
